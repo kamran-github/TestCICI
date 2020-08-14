@@ -26,11 +26,11 @@ class ViewController: UIViewController {
        
         
         if !self.validateEmail(emaiString: username.text!) {
-          alert = UIAlertController(title: "Alert", message: "Invalid Email", preferredStyle: UIAlertController.Style.alert)
+          alert = UIAlertController(title: "Alert", message: "Email is invalid", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else if !self.validPassword(passwordString: password.text!) {
-            alert = UIAlertController(title: "Alert", message: "Invalid Password", preferredStyle: UIAlertController.Style.alert)
+            alert = UIAlertController(title: "Alert", message: "Password is invalid", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
