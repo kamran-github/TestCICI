@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+     var alert = UIAlertController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
         guard let username = usernameTF else { return }
         guard let password = passwordTF else { return }
         
-        var alert = UIAlertController()
+       
         
         if !self.validateEmail(emaiString: username.text!) {
           alert = UIAlertController(title: "Alert", message: "Invalid Email", preferredStyle: UIAlertController.Style.alert)
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
-            
+            callLoginWebservices(username: username.text!, password: password.text!)
         }
     }
     
@@ -51,7 +52,9 @@ class ViewController: UIViewController {
     }
     
     func callLoginWebservices(username : String, password : String) {
-        
+        alert = UIAlertController(title: "Success", message: "You have logged in successfully", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
