@@ -19,16 +19,23 @@ class CI_CD_DemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCheckValidEmail() {
+        let vc = ViewController()
+        XCTAssertTrue(vc.validateEmail(emaiString: "kamran@gmail.com"))
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCheckInvalidEmail() {
+        let vc = ViewController()
+        XCTAssertFalse(vc.validateEmail(emaiString: "kamrangmail.com"))
     }
-
+    
+    func testValidPassword(){
+        let vc = ViewController()
+        XCTAssertTrue(vc.validPassword(passwordString: "789456123"))
+    }
+    
+    func testInvalidPassword() {
+        let vc = ViewController()
+        XCTAssertFalse(vc.validPassword(passwordString: "7894"))
+    }
 }
