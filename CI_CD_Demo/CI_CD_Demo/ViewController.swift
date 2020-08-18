@@ -20,7 +20,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapLogin(_ sender: Any) {
-        guard let username = usernameTF else { return }
+                
+    let amountVC = ScheduleConfirmViewController(nibName: "ScheduleConfirmViewController", bundle: nil)
+        self.navigationController?.pushViewController(amountVC, animated: true)
+        /*guard let username = usernameTF else { return }
         guard let password = passwordTF else { return }
         if !self.validateEmail(emaiString: username.text!) {
           alert = UIAlertController(title: "Alert", message: "Email is invalid", preferredStyle: UIAlertController.Style.alert)
@@ -36,7 +39,7 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }else {
             callLoginWebservices(username: username.text!, password: password.text!)
-        }
+        }*/
     }
     
     func validateEmail(emaiString : String)->Bool {
