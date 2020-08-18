@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-     var alert = UIAlertController()
+    var alert = UIAlertController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,11 @@ class ViewController: UIViewController {
             alert = UIAlertController(title: "Alert", message: "Password is invalid", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        } else { 
+        } else if containsSpecialCharacters(string: password.text!){
+            alert = UIAlertController(title: "Alert", message: "Invalid Password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else {
             callLoginWebservices(username: username.text!, password: password.text!)
         }
     }
@@ -46,6 +50,20 @@ class ViewController: UIViewController {
             return false
         }
         return true
+    }
+    
+    func containsSpecialCharacters(string: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "[^a-z0-9 ]", options: .caseInsensitive)
+            if let _ = regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            debugPrint(error.localizedDescription)
+            return true
+        }
     }
     
     func callLoginWebservices(username : String, password : String) {
