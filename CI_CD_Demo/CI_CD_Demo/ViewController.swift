@@ -22,9 +22,6 @@ class ViewController: UIViewController {
     @IBAction func didTapLogin(_ sender: Any) {
         guard let username = usernameTF else { return }
         guard let password = passwordTF else { return }
-        
-       
-        
         if !self.validateEmail(emaiString: username.text!) {
           alert = UIAlertController(title: "Alert", message: "Email is invalid", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
