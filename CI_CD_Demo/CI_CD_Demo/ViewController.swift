@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapRegister(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "RegisterStoryboard", bundle: nil)
+        let registerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+         navigationController?.pushViewController(registerVC, animated: true)
     }
     
     @IBAction func didTapForgetPassword(_ sender: Any) {

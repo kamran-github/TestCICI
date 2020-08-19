@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2F3A022B24EBDCDE009E0D0B /* ScheduleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A022924EBDCDE009E0D0B /* ScheduleConfirmViewController.swift */; };
 		2F3A022C24EBDCDE009E0D0B /* ScheduleConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3A022A24EBDCDE009E0D0B /* ScheduleConfirmViewController.xib */; };
+		2F3A022E24ECE40B009E0D0B /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3A022D24ECE40B009E0D0B /* RegisterStoryboard.storyboard */; };
+		2F3A023024ECE5FD009E0D0B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A022F24ECE5FD009E0D0B /* RegisterViewController.swift */; };
 		2F4EF4D224E38EA000FEFA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EF4D124E38EA000FEFA17 /* AppDelegate.swift */; };
 		2F4EF4D424E38EA000FEFA17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EF4D324E38EA000FEFA17 /* SceneDelegate.swift */; };
 		2F4EF4D624E38EA000FEFA17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EF4D524E38EA000FEFA17 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		2F3A022924EBDCDE009E0D0B /* ScheduleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleConfirmViewController.swift; sourceTree = "<group>"; };
 		2F3A022A24EBDCDE009E0D0B /* ScheduleConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleConfirmViewController.xib; sourceTree = "<group>"; };
+		2F3A022D24ECE40B009E0D0B /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterStoryboard.storyboard; sourceTree = "<group>"; };
+		2F3A022F24ECE5FD009E0D0B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2F4EF4CE24E38EA000FEFA17 /* CI_CD_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CI_CD_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4EF4D124E38EA000FEFA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4EF4D324E38EA000FEFA17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,10 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				2F4EF4D124E38EA000FEFA17 /* AppDelegate.swift */,
+				2F3A022F24ECE5FD009E0D0B /* RegisterViewController.swift */,
 				2F3A022924EBDCDE009E0D0B /* ScheduleConfirmViewController.swift */,
 				2F3A022A24EBDCDE009E0D0B /* ScheduleConfirmViewController.xib */,
 				2F4EF4D324E38EA000FEFA17 /* SceneDelegate.swift */,
 				2F4EF4D524E38EA000FEFA17 /* ViewController.swift */,
+				2F3A022D24ECE40B009E0D0B /* RegisterStoryboard.storyboard */,
 				2F4EF4D724E38EA000FEFA17 /* Main.storyboard */,
 				2F4EF4DA24E38EA200FEFA17 /* Assets.xcassets */,
 				2F4EF4DC24E38EA200FEFA17 /* LaunchScreen.storyboard */,
@@ -242,6 +248,7 @@
 				2F4EF4DE24E38EA200FEFA17 /* LaunchScreen.storyboard in Resources */,
 				2F4EF4DB24E38EA200FEFA17 /* Assets.xcassets in Resources */,
 				2F4EF4D924E38EA000FEFA17 /* Main.storyboard in Resources */,
+				2F3A022E24ECE40B009E0D0B /* RegisterStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F3A022B24EBDCDE009E0D0B /* ScheduleConfirmViewController.swift in Sources */,
+				2F3A023024ECE5FD009E0D0B /* RegisterViewController.swift in Sources */,
 				2F4EF4D624E38EA000FEFA17 /* ViewController.swift in Sources */,
 				2F4EF4D224E38EA000FEFA17 /* AppDelegate.swift in Sources */,
 				2F4EF4D424E38EA000FEFA17 /* SceneDelegate.swift in Sources */,
