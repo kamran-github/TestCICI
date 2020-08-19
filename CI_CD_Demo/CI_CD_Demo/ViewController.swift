@@ -22,9 +22,6 @@ class ViewController: UIViewController {
     @IBAction func didTapLogin(_ sender: Any) {
         guard let username = usernameTF else { return }
         guard let password = passwordTF else { return }
-        
-        
-        
         if !self.validateEmail(emaiString: username.text!) {
             alert = UIAlertController(title: "Alert", message: "Invalid Email", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -41,7 +38,9 @@ class ViewController: UIViewController {
             callLoginWebservices(username: username.text!, password: password.text!)
         }
     }
-    
+}
+
+extension ViewController {
     func validateEmail(emaiString : String)->Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
@@ -76,4 +75,3 @@ class ViewController: UIViewController {
     }
     
 }
-
